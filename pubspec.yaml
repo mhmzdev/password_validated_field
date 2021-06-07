@@ -1,8 +1,7 @@
 name: password_validated_field
 description: With this package you can have a nice, cool and validated password text fields in your application.
 version: 0.0.1
-author:
-homepage: 
+homepage: https://github.com/m-hamzashakeel/password_validated_field
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
