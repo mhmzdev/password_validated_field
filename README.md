@@ -21,7 +21,7 @@ Below are few samples of what the package looks like.
 
 **Import** the package and use `package:password_validated_field/password_validated_field.dart`
 
-## Simple usage
+## 💻 Simple usage
 
 <img src="https://user-images.githubusercontent.com/43790152/121000165-5683b180-c7a3-11eb-8a8f-5524dfa63291.gif" />
 
@@ -239,5 +239,27 @@ class _MoreCustomizedFieldState extends State<MoreCustomizedField> {
   }
 }
 ```
+
+## 🛠 Modifying the package
+
+You can easily modify the package according to your need.
+
+Major attributes to look for:
+- `RegExp` at the bottom of [validated_field](lib/src/validated_field.dart)
+- `onChange` callBack in [validated_field](lib/src/validated_field.dart)
+- `requirement_widget` in [requirement_widget](lib/src/requirement_widget.dart)
+- `requirement_widget` checks added in [validated_field](lib/src/validated_field.dart)
+
+### RegExp modification
+
+- 1 Uppercase `RegExp(r'[A-Z]')`
+- 1 lowercase `RegExp(r'[a-z]')`
+- 1 numeric value `RegExp(r'[0-9]')`
+- 1 special character `RegExp(r'[!@#$%^&*(),.?":{}|<>]')`
+- 6 character length `_pass.length >= 6`
+
+Combine `RegExp` that you would need to modify along with the above mentioned:
+
+`RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{6,}$')`
 
 Complete Simple Example, [here.](example/example.dart)
