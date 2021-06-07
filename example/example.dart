@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:password_validated_field/password_validated_field.dart';
 
+
+/// Complete Simple Example
 class Example extends StatefulWidget {
   const Example({Key? key}) : super(key: key);
 
